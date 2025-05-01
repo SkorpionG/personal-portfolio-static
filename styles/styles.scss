@@ -1,0 +1,116 @@
+$themeColor: rgb(0, 255, 195);
+$themeColorDark: rgb(0, 220, 170);
+$themeColorAlpha: rgba(0, 255, 195, 0.3);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ol,
+ul {
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+.cta-active {
+  transform: scale(1.2);
+}
+
+.cta-hover {
+  box-shadow: 5px 5px 10px $themeColorDark;
+}
+
+.progress-hover {
+  border: 2px solid white;
+  border-radius: inherit;
+  cursor: pointer;
+}
+
+.border-decor-default {
+  border-color: $themeColor;
+}
+
+.border-decor-dark {
+  border-color: $themeColorDark;
+}
+
+.border-decor-light {
+  border-color: $themeColorAlpha;
+}
+
+#to-top {
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  padding: 0.25rem 0.5rem;
+  bottom: 2rem;
+  right: 2rem;
+  border-radius: 20px;
+  background-color: $themeColor;
+  color: white;
+  transition: all 0.2s ease;
+  box-shadow: 2.5px 2.5px 5px $themeColorDark;
+  &:hover {
+    box-shadow: 5px 5px 10px $themeColorDark;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  span {
+    display: none;
+  }
+}
+
+body {
+  overflow-x: hidden;
+  div#navbar-container {
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 5;
+
+    nav#navbar {
+      background-color: white;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Add shadow to navbar
+
+      ul {
+        display: flex;
+        width: 100%;
+        justify-content: flex-start;
+        li.nav-item {
+          list-style-type: none;
+          margin: 1rem 2rem;
+
+          // Style for the active navigation item
+          &.active a {
+            color: $themeColorDark; // Use theme color for active link
+            font-weight: bold; // Make it bold
+            border-bottom: 2px solid $themeColor; // Add an underline
+            padding-bottom: 0.25rem; // Space for the underline
+          }
+        }
+
+        a {
+          color: black;
+          text-decoration: none;
+          transition: all 0.2s ease;
+          &:hover {
+            color: $themeColor;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,283 @@
+@import "./styles.scss";
+
+body {
+  main {
+    section.intro {
+      padding: 2rem 0;
+      min-height: 70vh;
+      background-color: white;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+
+      div {
+        // min-width: 400px;
+        flex: 0 1 450px;
+      }
+
+      div.info {
+        // border: 1px solid black;
+
+        padding: 1rem;
+        h1 {
+          font-size: 3.5rem;
+        }
+        h2 {
+          font-size: 1rem;
+        }
+        a {
+          color: white;
+          background-color: $themeColor;
+          padding: 0.25rem 0.5rem;
+          font-size: 1.5rem;
+          border-radius: 20px;
+          display: inline-block;
+          margin-top: 2rem;
+          text-decoration: none;
+          transition: all 0.2s ease;
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+      }
+
+      div.main-profile-img {
+        // border: 1px solid red;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+
+    section.about-me {
+      padding: 5rem 0;
+      background-color: $themeColorAlpha;
+
+      section.description {
+        p {
+          font-size: 1rem;
+        }
+        width: 50%;
+        margin: 0 auto;
+        text-align: center;
+        h2 {
+          font-size: 2rem;
+        }
+        .progress-bar-area {
+          p.skill {
+            font-size: 1.25rem;
+            margin-top: 1rem;
+          }
+        }
+      }
+    }
+
+    section.resume {
+      display: flex;
+      flex-wrap: wrap-reverse;
+      padding: 2rem;
+      justify-content: center;
+      align-items: center;
+
+      section.table {
+        flex: 1 0 500px;
+        padding: 2rem;
+        background-color: transparent !important;
+
+        table {
+          border-collapse: collapse;
+
+          col.resume-property {
+            width: 20%;
+          }
+
+          col.resume-value {
+            width: 80%;
+          }
+
+          tr {
+            border-bottom: 2px solid gray;
+            transition: all 0.2s ease;
+            &:hover {
+              background-color: $themeColorAlpha;
+            }
+
+            td {
+              padding: 1rem;
+
+              li {
+                list-style-position: inside;
+              }
+            }
+          }
+        }
+      }
+
+      section.resume-image {
+        flex: 0 1 450px;
+        max-width: 450px;
+        padding: 0 2rem;
+        position: relative;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+
+        div.green-rect {
+          border: 10px solid $themeColorAlpha;
+          position: absolute;
+          z-index: -1;
+          animation-duration: 10s;
+          animation-iteration-count: infinite;
+          animation-direction: alternate-reverse;
+          animation-timing-function: linear;
+        }
+
+        div#green-rect-1 {
+          border-color: $themeColor;
+          left: -20px;
+          width: 90%;
+          height: 90%;
+          animation-name: color-rotation-1;
+        }
+
+        div#green-rect-2 {
+          border-color: $themeColorDark;
+          top: -20px;
+          right: 10px;
+          width: 80%;
+          height: 90%;
+          animation-name: color-rotation-2;
+        }
+
+        div#green-rect-3 {
+          top: 20px;
+          right: -10px;
+          width: 100%;
+          height: 100%;
+          animation-name: color-rotation-3;
+        }
+
+        @keyframes color-rotation-1 {
+          0% {
+            border-color: $themeColor;
+          }
+          20% {
+            border-color: $themeColorDark;
+          }
+          40% {
+            border-color: $themeColorAlpha;
+          }
+          60% {
+            border-color: $themeColor;
+          }
+          80% {
+            border-color: $themeColorAlpha;
+          }
+          100% {
+            border-color: $themeColorDark;
+          }
+        }
+        @keyframes color-rotation-2 {
+          0% {
+            border-color: $themeColorDark;
+          }
+          20% {
+            border-color: $themeColorAlpha;
+          }
+          40% {
+            border-color: $themeColor;
+          }
+          60% {
+            border-color: $themeColorDark;
+          }
+          80% {
+            border-color: $themeColor;
+          }
+          100% {
+            border-color: $themeColorAlpha;
+          }
+        }
+        @keyframes color-rotation-3 {
+          0% {
+            border-color: $themeColorAlpha;
+          }
+          20% {
+            border-color: $themeColor;
+          }
+          40% {
+            border-color: $themeColorDark;
+          }
+          60% {
+            border-color: $themeColorAlpha;
+          }
+          80% {
+            border-color: $themeColorDark;
+          }
+          100% {
+            border-color: $themeColor;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    nav {
+      ul {
+        justify-content: center;
+      }
+    }
+
+    main {
+      section.about-me {
+        section.description {
+          width: 80%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    nav {
+      position: static;
+      ul {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    main {
+      section.intro {
+        div.info {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+
+          #cta-learn-more {
+            align-self: center;
+          }
+        }
+      }
+
+      section.resume {
+        gap: 2rem;
+        section.table {
+          flex: 1 1 100%;
+          padding: 0;
+          overflow-x: scroll;
+          table {
+            min-width: 400px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,84 @@
+@import "./styles.scss";
+
+.projects-container {
+  padding: 2rem 5%;
+  max-width: 1200px;
+  margin: 2rem auto;
+
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: $themeColorDark;
+    margin-bottom: 2rem;
+  }
+}
+
+#projects-list {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); // Responsive grid
+  gap: 1.5rem;
+}
+
+.project-item {
+  background-color: white;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    color: $themeColorDark;
+    margin-bottom: 0.75rem;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 1rem;
+  }
+
+  .project-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+
+    a {
+      text-decoration: none;
+      color: $themeColorDark;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      border: 1px solid $themeColorAlpha;
+      border-radius: 4px;
+      transition: background-color 0.2s ease, color 0.2s ease;
+
+      &:hover {
+        background-color: $themeColorAlpha;
+        color: darken($themeColorDark, 10%);
+      }
+    }
+  }
+}
+
+// Responsive adjustments if needed
+@media screen and (max-width: 768px) {
+  .projects-container {
+    padding: 1.5rem 3%;
+    h1 {
+      font-size: 2rem;
+    }
+  }
+  #projects-list {
+    grid-template-columns: 1fr; // Stack projects on smaller screens
+  }
+}
