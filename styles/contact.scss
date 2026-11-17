@@ -76,6 +76,7 @@
     &:hover {
       background-color: $themeColorDark;
     }
+
     &:active {
       transform: scale(0.98);
     }
@@ -102,6 +103,7 @@
   a {
     color: $themeColorDark;
     text-decoration: none;
+
     &:hover {
       text-decoration: underline;
     }
@@ -112,9 +114,11 @@
 @media screen and (max-width: 768px) {
   .contact-container {
     padding: 1.5rem 3%;
+
     h1 {
       font-size: 2rem;
     }
+
     h2 {
       font-size: 1.5rem;
     }

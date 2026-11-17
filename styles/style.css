@@ -148,13 +148,13 @@ body main section.about-me {
   padding: 5rem 0;
   background-color: rgba(0, 255, 195, 0.3);
 }
+body main section.about-me section.description p {
+  font-size: 1rem;
+}
 body main section.about-me section.description {
   width: 50%;
   margin: 0 auto;
   text-align: center;
-}
-body main section.about-me section.description p {
-  font-size: 1rem;
 }
 body main section.about-me section.description h2 {
   font-size: 2rem;

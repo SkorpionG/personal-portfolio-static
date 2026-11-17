@@ -162,7 +162,7 @@ body div#navbar-container nav#navbar ul a:hover {
 }
 .project-item .project-links a:hover {
   background-color: rgba(0, 255, 195, 0.3);
-  color: #00a983;
+  color: rgb(0, 169, 130.5909090909);
 }
 
 @media screen and (max-width: 768px) {

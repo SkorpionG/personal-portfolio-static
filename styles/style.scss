@@ -20,12 +20,15 @@ body {
         // border: 1px solid black;
 
         padding: 1rem;
+
         h1 {
           font-size: 3.5rem;
         }
+
         h2 {
           font-size: 1rem;
         }
+
         a {
           color: white;
           background-color: $themeColor;
@@ -36,6 +39,7 @@ body {
           margin-top: 2rem;
           text-decoration: none;
           transition: all 0.2s ease;
+
           &:hover {
             transform: scale(1.2);
           }
@@ -43,6 +47,7 @@ body {
       }
 
       div.main-profile-img {
+
         // border: 1px solid red;
         img {
           width: 100%;
@@ -59,12 +64,15 @@ body {
         p {
           font-size: 1rem;
         }
+
         width: 50%;
         margin: 0 auto;
         text-align: center;
+
         h2 {
           font-size: 2rem;
         }
+
         .progress-bar-area {
           p.skill {
             font-size: 1.25rem;
@@ -100,6 +108,7 @@ body {
           tr {
             border-bottom: 2px solid gray;
             transition: all 0.2s ease;
+
             &:hover {
               background-color: $themeColorAlpha;
             }
@@ -165,58 +174,75 @@ body {
           0% {
             border-color: $themeColor;
           }
+
           20% {
             border-color: $themeColorDark;
           }
+
           40% {
             border-color: $themeColorAlpha;
           }
+
           60% {
             border-color: $themeColor;
           }
+
           80% {
             border-color: $themeColorAlpha;
           }
+
           100% {
             border-color: $themeColorDark;
           }
         }
+
         @keyframes color-rotation-2 {
           0% {
             border-color: $themeColorDark;
           }
+
           20% {
             border-color: $themeColorAlpha;
           }
+
           40% {
             border-color: $themeColor;
           }
+
           60% {
             border-color: $themeColorDark;
           }
+
           80% {
             border-color: $themeColor;
           }
+
           100% {
             border-color: $themeColorAlpha;
           }
         }
+
         @keyframes color-rotation-3 {
           0% {
             border-color: $themeColorAlpha;
           }
+
           20% {
             border-color: $themeColor;
           }
+
           40% {
             border-color: $themeColorDark;
           }
+
           60% {
             border-color: $themeColorAlpha;
           }
+
           80% {
             border-color: $themeColorDark;
           }
+
           100% {
             border-color: $themeColor;
           }
@@ -248,6 +274,7 @@ body {
   body {
     nav {
       position: static;
+
       ul {
         flex-direction: column;
         align-items: center;
@@ -269,10 +296,12 @@ body {
 
       section.resume {
         gap: 2rem;
+
         section.table {
           flex: 1 1 100%;
           padding: 0;
           overflow-x: scroll;
+
           table {
             min-width: 400px;
           }

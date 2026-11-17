@@ -15,10 +15,8 @@
 
 #projects-list {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(300px, 1fr)
-  ); // Responsive grid
+  grid-template-columns: repeat(auto-fit,
+      minmax(300px, 1fr)); // Responsive grid
   gap: 1.5rem;
 }
 
@@ -74,10 +72,12 @@
 @media screen and (max-width: 768px) {
   .projects-container {
     padding: 1.5rem 3%;
+
     h1 {
       font-size: 2rem;
     }
   }
+
   #projects-list {
     grid-template-columns: 1fr; // Stack projects on smaller screens
   }

@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log(documentHeight);
 
   const sheet = Array.from(document.styleSheets).filter((styleSheet) =>
-    styleSheet.href.endsWith("bubble.css")
+    styleSheet.href.endsWith("bubble.css"),
   );
   const rule = `
     @keyframes animateBubble {
