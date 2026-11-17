@@ -1,0 +1,40 @@
+{
+  "name": "personal-portfolio-static",
+  "version": "1.0.0",
+  "description": "A responsive static personal portfolio website showcasing skills, experience, and projects.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint \"src/**/*.js\"",
+    "lint:fix": "eslint \"src/**/*.js\" --fix",
+    "prepare": "husky",
+    "husky:init": "chmod +x .husky/pre-commit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SkorpionG/personal-portfolio-static.git"
+  },
+  "keywords": [
+    "portfolio",
+    "bootstrap",
+    "scss",
+    "vanilla-javascript"
+  ],
+  "author": "SkorpionG",
+  "bugs": {
+    "url": "https://github.com/SkorpionG/personal-portfolio-static/issues"
+  },
+  "homepage": "https://github.com/SkorpionG/personal-portfolio-static#readme",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.15.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.7",
+    "globals": "^17.14.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.6.1",
+    "prettier": "^3.10.1"
+  }
+}

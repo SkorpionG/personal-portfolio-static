@@ -1,4 +1,4 @@
-const ICON_BASE = "./assets/icons/";
+const ICON_BASE = "./public/assets/icons/";
 
 export const techStacks = [
   {

@@ -1,20 +1,22 @@
 # Personal Portfolio Website
 
-A modern, responsive static personal portfolio website designed to showcase developer skills, experience, projects, and contact information. Built with clean, semantic HTML5, modular SCSS/CSS, Bootstrap 5, and JavaScript (ES6 Modules).
+A responsive static personal portfolio website designed to showcase developer skills, education, experience, projects, and contact information.
 
-## 🚀 Features
+## Features
 
-- **Responsive Web Design (RWD)**: Optimized layout and smooth viewing experience across mobile, tablet, and desktop screens.
-- **Modular Component Rendering**: Uses JavaScript ES6 modules to dynamically inject the navigation bar (with active page detection), back-to-top button, tech stacks, and tools.
-- **Data-Driven Architecture**: Decouples content from markup by managing skills, projects, tech stacks, and tools in dedicated data modules (`js/data/`).
-- **Interactive Animations**: Features animated skill progress bars with hover expansion, a pulsing call-to-action button, and dynamic ambient floating bubbles (`bubble.js`).
+- **Responsive Design**: Adapts smoothly across desktop, tablet, and mobile viewports.
+- **Modular Rendering**: Dynamically injects the navigation bar, back-to-top button, tech stack icons, tools, and project cards via ES modules.
+- **Data-Driven Content**: Manages skills, tech stacks, tools, and projects in dedicated modules under `src/data/`.
+- **Interactive Animations**: Includes skill progress bar hover effects, animated call-to-action transitions, and floating ambient bubbles.
 
-## 🌐 Local Preview
+## Technologies
 
-Since this project uses ES6 JavaScript modules, you can preview it locally using either of the following methods:
+- HTML5
+- CSS3 / SCSS
+- Vanilla JavaScript (ES Modules)
+- Bootstrap 5 & jQuery
+- ESLint, Prettier, Husky, and `lint-staged`
 
-1. **Live Server**: In VS Code, install the `Live Server` extension, right-click `index.html`, and select **Open with Live Server**.
-2. **Local HTTP Server**: Run a lightweight local server from the project root:
-   ```bash
-   python3 -m http.server 8000
-   ```
+## Local Preview
+
+Open `index.html` with VS Code Live Server or run a local static server from the project root.

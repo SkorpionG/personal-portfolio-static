@@ -18,16 +18,18 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log(documentHeight);
 
   const sheet = Array.from(document.styleSheets).filter((styleSheet) =>
-    styleSheet.href.endsWith("bubble.css"),
+    styleSheet.href?.endsWith("bubble.css")
   );
-  const rule = `
-    @keyframes animateBubble {
+  if (sheet.length > 0) {
+    const rule = `
+      @keyframes animateBubble {
         0% {
-        margin-top: ${documentHeight}px;
+          margin-top: ${documentHeight}px;
         }
         100% {
-            margin-top: -100%;
+          margin-top: -100%;
         }
-    }`;
-  sheet[0].insertRule(rule);
+      }`;
+    sheet[0].insertRule(rule);
+  }
 });
